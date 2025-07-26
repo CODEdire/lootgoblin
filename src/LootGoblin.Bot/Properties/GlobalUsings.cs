@@ -1,0 +1,11 @@
+﻿global using LootGoblin.Bot.Data;
+global using LootGoblin.Bot.Data.Entities;
+global using LootGoblin.Bot.Models;
+global using LootGoblin.Bot.Services;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using NetCord;
+global using NetCord.Rest;
+global using NetCord.Services;
+global using NetCord.Services.ApplicationCommands;
+global using LootGoblin.Bot.Discord.Preconditions;

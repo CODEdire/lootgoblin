@@ -1,0 +1,28 @@
+Installing/Updating the tools:
+
+# dotnet tool install [--global] dotnet-ef
+# dotnet tool update  [--global] dotnet-ef
+
+Use Global if you want systemwide
+
+
+Creating a database change:
+
+# dotnet ef migrations add <UpdateName> --startup-project src/LootGoblin.Bot --output-dir Data/Migrations
+
+TODO: Doc the parameters around 
+
+
+Updating your local database:
+
+App will regenerate from scratch if you drop database first (Should only do locally!)
+
+# dotnet ef database drop --startup-project src/LootGoblin.Bot
+
+If you want an incremental/first deploy, use this:
+
+# dotnet ef database update --verbose --startup-project src/LootGoblin.Bot
+
+After model creation/update, run these commands to pre-compile the model or generate scripts:
+
+# dotnet ef dbcontext optimize --startup-project src/LootGoblin.Bot -o ./Data/CompiledModels --nativeaot
